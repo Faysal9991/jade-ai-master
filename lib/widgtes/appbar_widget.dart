@@ -27,9 +27,12 @@ class AppBarWidget extends StatelessWidget {
             CircleAvatar(
              radius: 14,
              backgroundColor: const Color.fromARGB(255, 91, 95, 97),
-             child: IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/user-solid.svg",color: Colors.white,)),),
+             child:  Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: SvgPicture.asset("assets/user-solid.svg",color: Colors.white,),
+             )),
          const Spacer(),
-        IconButton(onPressed: (){}, icon: const Icon(FontAwesomeIcons.bell,color: Color.fromARGB(255, 91, 95, 97),))
+        IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.bell))
           ],
         ),
       ),

@@ -43,7 +43,7 @@ class _NavegationBarState extends State<NavegationBar> {
         color: Colors.white,
         buttonBackgroundColor: Colors.white,
         backgroundColor: const Color(0xffE5E5E5),
-        animationCurve: Curves.easeInOut,
+        animationCurve: Curves.easeInOutCubicEmphasized,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {
           setState(() {
