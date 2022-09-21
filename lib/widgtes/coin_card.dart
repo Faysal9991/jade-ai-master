@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class CoinCard extends StatelessWidget {
   CoinCard({
     super.key, 
+    required this.height,
+    required this.width,
     required this.name,
     required this.symbol,
     required this.imageUrl,
@@ -10,7 +12,8 @@ class CoinCard extends StatelessWidget {
     required this.change,
     required this.changePercentage,
   });
-
+  final double height;
+  final double width;
   String name;
   String symbol;
   String imageUrl;
@@ -23,7 +26,7 @@ class CoinCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 15, left: 10, right: 10),
       child: Container(
-        height: 100,
+        height: height*0.1,
         decoration: BoxDecoration(
           color: Colors.grey[300],
           borderRadius: BorderRadius.circular(20),
@@ -65,8 +68,8 @@ class CoinCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                height: 60,
-                width: 60,
+                height: height*0.05,
+                width: width*0.13,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Image.network(imageUrl),
@@ -84,7 +87,7 @@ class CoinCard extends StatelessWidget {
                       name,
                       style: TextStyle(
                         color: Colors.grey[900],
-                        fontSize: 25,
+                        fontSize: height*0.02,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -109,7 +112,7 @@ class CoinCard extends StatelessWidget {
                     price.toDouble().toString(),
                     style: TextStyle(
                       color: Colors.grey[900],
-                      fontSize: 20,
+                      fontSize: height*0.02,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -119,7 +122,7 @@ class CoinCard extends StatelessWidget {
                         : '+${change.toDouble()}',
                     style: TextStyle(
                       color: change.toDouble() < 0 ? Colors.red : Colors.green,
-                      fontSize: 18,
+                      fontSize: height*0.014,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -131,7 +134,7 @@ class CoinCard extends StatelessWidget {
                       color: changePercentage.toDouble() < 0
                           ? Colors.red
                           : Colors.green,
-                      fontSize: 18,
+                      fontSize: height*0.014,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

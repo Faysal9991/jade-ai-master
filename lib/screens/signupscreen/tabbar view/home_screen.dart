@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      drawer: Drawer(
+      drawer: const Drawer(
       child:SliderView()
     ),
       backgroundColor: const Color(0xffE5E5E5),
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                         width: width * 0.02,
                       ),
                       const Text(
-                        "কর্মস্থলে রোবট সংখ্যা:1",
+                        "Number of robots at work: 1",
                         style: TextStyle(color: Colors.white),
                       )
                     ],
