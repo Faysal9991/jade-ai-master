@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jadeais/screens/recharge_screen.dart';
+import 'package:jadeais/screens/withdraw_screen.dart';
 
 import '../../../widgtes/slider_view.dart';
 import '../../robot details/robot_screen.dart';
@@ -235,7 +237,12 @@ class _UserScreenState extends State<UserScreen> {
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.teal),
-                              onPressed: () {},
+                              onPressed: () {
+                                         Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const RechargeScreen()),
+  );
+                              },
                               child: Text("Recharge"))),
                       SizedBox(
                         width: width * 0.02,
@@ -245,7 +252,12 @@ class _UserScreenState extends State<UserScreen> {
                           child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.greenAccent),
-                              onPressed: () {},
+                              onPressed: () {
+                                         Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const WithdrawScreen()),
+  );
+                              },
                               child: Text("Withdraw")))
                     ],
                   ),
