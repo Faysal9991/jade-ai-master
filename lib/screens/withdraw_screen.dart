@@ -17,7 +17,7 @@ class WithdrawScreen extends StatelessWidget {
         leading: const BackButton(color: Colors.black),
         backgroundColor: Colors.white,
         title: Text(
-          "Recharge",
+          "Withdraw",
           style: GoogleFonts.lato(color: Colors.black),
         ),
       ),

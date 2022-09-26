@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
-class RechargeScreen extends StatelessWidget {
+class RechargeScreen extends StatefulWidget {
   const RechargeScreen({super.key});
 
+  @override
+  State<RechargeScreen> createState() => _RechargeScreenState();
+}
+
+class _RechargeScreenState extends State<RechargeScreen> {
   @override
   Widget build(BuildContext context) {
     TextEditingController textEditingController = TextEditingController();
@@ -115,7 +120,7 @@ class RechargeScreen extends StatelessWidget {
                             border: Border.all(color: Colors.black)),
                         child: TextFormField(
                           controller: textEditingController,
-                          keyboardType: TextInputType.number,
+                          // keyboardType: TextInputType.number,
                           decoration: const InputDecoration(
                               contentPadding: EdgeInsets.only(
                                   top: 4, bottom: 4, left: 6, right: 6),

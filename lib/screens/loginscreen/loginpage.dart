@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:jadeais/screens/signupscreen/signuppage.dart';
 
 import '../../widgtes/phonenumberpicker.dart';
+import '../signupscreen/tabbar view/nevegation_screen.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -46,7 +47,7 @@ class LoginPage extends StatelessWidget {
                   child: TextField(
 
                     decoration: InputDecoration(
-                        labelText: "পাসওয়ার্ড লিখুন",
+                        hintText: "পাসওয়ার্ড লিখুন",
                         contentPadding: const EdgeInsets.all(20.0),
                         border: InputBorder.none,
                         suffixIcon: IconButton(onPressed: (){},
@@ -60,7 +61,10 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: height*0.02,),
                 SizedBox(
                     width: width,
-                    child: ElevatedButton(onPressed: (){}, child: const Text("প্রবেশ করুন"))),
+                    child: ElevatedButton(onPressed: (){
+Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>NavegationBar()));
+
+                    }, child: const Text("প্রবেশ করুন"))),
                 SizedBox(height: height*0.02,),
                 Row(
                   children: [

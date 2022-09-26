@@ -8,6 +8,7 @@ import 'package:jadeais/screens/robot%20details/robot_screen.dart';
 import 'package:jadeais/widgtes/home_page_help_widget.dart';
 
 import '../../../widgtes/slider_view.dart';
+import '../../Buy Robot/buy_robot_Screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -328,7 +329,10 @@ class _HomePageState extends State<HomePage> {
                               child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.white),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>BuyRobot()));
+
+                                  },
                                   child: Text(
                                     "Buy Now",
                                     style:

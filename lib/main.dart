@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:jadeais/screens/loginscreen/loginpage.dart';
 import 'package:jadeais/screens/recharge_screen.dart';
 import 'package:jadeais/screens/signupscreen/tabbar%20view/home_screen.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const NavegationBar(),
+      home:  LoginPage(),
     );
   }
 }

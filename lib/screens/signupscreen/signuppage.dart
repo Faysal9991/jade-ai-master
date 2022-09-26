@@ -30,10 +30,48 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(height: height*0.06,),
                  const Text("আপনার ফোন নম্বার",style: TextStyle(color: Color(0xffA5A3A3)),),
                 SizedBox(height: height*0.02,),
+                
                 SizedBox(
                     height: height*0.07,
                     child: const PhoneNumberPicker()),
                 SizedBox(height: height*0.02,),
+                  Container(
+                  height: height*0.07,
+
+                  decoration: BoxDecoration(
+                      color: const Color(0xffF6F6F6),
+                      borderRadius: BorderRadius.circular(5)
+                  ),
+                  child: const TextField(
+
+                    decoration: InputDecoration(
+                        labelText: "Input your name",
+                        contentPadding: EdgeInsets.all(20.0),
+                        border: InputBorder.none,
+                        
+                        )
+                    ),
+                  ),
+                  SizedBox(height: height*0.02,),
+                    Container(
+                  height: height*0.07,
+
+                  decoration: BoxDecoration(
+                      color: const Color(0xffF6F6F6),
+                      borderRadius: BorderRadius.circular(5)
+                  ),
+                  child: const TextField(
+
+                    decoration: InputDecoration(
+                        labelText: "input your gmail",
+                        contentPadding: EdgeInsets.all(20.0),
+                        border: InputBorder.none,
+                        
+                        )
+                    ),
+                  ),
+                
+               
                 const Text("পাসওয়ার্ড লিখুন",style: TextStyle(color: Color(0xffA5A3A3)),),
                 SizedBox(height: height*0.02,),
                 Container(
@@ -55,8 +93,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: height*0.02,),
-                const Text("পাসওয়ার্ড ভুলে গেছেন?",style: TextStyle(color: Color(0xffA5A3A3)),),
+               
                 SizedBox(height: height*0.02,),
                 SizedBox(
                     width: width,
